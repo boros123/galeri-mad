@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Viga&display=swap');
+body{
+    font-family: 'poppins';
+    /* background-color: #000000; */
+}
+
+.txt{
+    font-size: 4rem;
+    margin-top: -60px;
+}
+/* .glow{
+-webkit-box-shadow: 0px 0px 102px 6px rgba(255, 255, 255, 0.73);
+    -moz-box-shadow: 0px 0px 102px 6px rgba(255, 255, 255, 0.73);
+    box-shadow: 0px 0px 102px 6px rgba(255, 255, 255, 0.73);
+} */
+.btn{
+    border: none;
+    
+}
+.btnav {
+    outline: none;
+    cursor: pointer;
+    border: none;
+
+margin: 3px;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 0.10rem;
+    font-weight: 700;
+    font-size: 17px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #000000;
+    color: ghostwhite;
+}
+
+.btnav span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+}
+
+.btnav:hover span {
+    color: rgb(255, 255, 255);
+}
+
+.btnav::before,
+.btnav::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.btnav::before {
+    content: "";
+    background: #a7a7a7;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.btnav:hover::before {
+    transform: translate3d(100%, 0, 0);
+}
+.setting-btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 0px 0px 2px rgb(95, 95, 95);
+}
+
+.bar {
+    width: 50%;
+    height: 2px;
+    background-color: rgb(229, 229, 229);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 2px;
+}
+
+.bar::before {
+    content: "";
+    width: 2px;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: all 0.3s;
+    box-shadow: 0px 0px 5px white;
+}
+
+.bar1::before {
+    transform: translateX(-4px);
+}
+
+.bar2::before {
+    transform: translateX(4px);
+}
+
+.setting-btn:hover .bar1::before {
+    transform: translateX(4px);
+}
+
+.setting-btn:hover .bar2::before {
+    transform: translateX(-4px);
+}
+
+.setting-btn:hover .bar2::before {
+    transform: translateX(-4px);
+}
+.hov {
+    
+    text-decoration: none;
+    font-size:19px;
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+}
+.hov:hover{
+    color: #000000;
+}
+.hov::before {
+    margin-left: auto;
+   
+}
+
+.hov::after,
+.hov::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #000000;
+    display: block;
+    transition: 0.5s;
+}
+
+.hov:hover::after,
+.hov:hover::before {
+    width: 100%;
+color: #000000;
+}
+.btns {
+    /* padding: 1em 2em; */
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #000000;
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    /* outline: 2px solid #000000; */
+}
+
+.btns:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+    outline: 2px solid #000000;
+    box-shadow: 4px 5px 17px -4px #615c5c;
+}
+
+.btns::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #8f8f8f;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+}
+
+.btns:hover::before {
+    width: 250%;
+}
+
+
+.btg {
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 3px solid #ffffff;
+    border-radius: 2px;
+    position: relative;
+    color: #757575;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+.btg:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #9c9c9c;
+    z-index: -1;
+}
+
+.btg:hover,
+.btg:focus {
+    color: white;
+}
+
+.btg:hover:before,
+.btg:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+.btg:active {
+    transform: scale(0.9);
+}
+
+
+
+
+.cards {
+    
+    background: rgb(255, 255, 255);
+    /* border-radius: 0.4em; */
+    box-shadow: 0.3em 0.3em 0.7em #00000015;
+    transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: rgb(250, 250, 250) 0.2em solid;
+}
+
+.cards:hover {
+    border: #000000 0.2em solid;
+}
